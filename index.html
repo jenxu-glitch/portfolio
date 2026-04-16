@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jen Portfolio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="book-section" aria-label="摄影集翻页">
+      <header class="book-header">
+        <p class="eyebrow">Independent Photography Portfolio</p>
+      </header>
+
+      <div class="book-scene">
+        <div class="album" id="album">
+          <span class="stack stack-left" id="stackLeft" aria-hidden="true"></span>
+          <span class="stack stack-right" id="stackRight" aria-hidden="true"></span>
+
+          <div class="spread spread-base" id="baseSpread">
+            <div class="half half-left"><img id="currentLeft" alt="当前跨页左页" /></div>
+            <div class="half half-right"><img id="currentRight" alt="当前跨页右页" /></div>
+          </div>
+
+          <div class="spread reveal-next" id="revealNext" aria-hidden="true">
+            <div class="half half-left"><img id="revealNextLeft" alt="" /></div>
+            <div class="half half-right"><img id="revealNextRight" alt="" /></div>
+          </div>
+
+          <div class="spread reveal-prev" id="revealPrev" aria-hidden="true">
+            <div class="half half-left"><img id="revealPrevLeft" alt="" /></div>
+            <div class="half half-right"><img id="revealPrevRight" alt="" /></div>
+          </div>
+
+          <div class="turning turn-next" id="turnNext" aria-hidden="true">
+            <div class="face front"><img id="turnNextFront" alt="" /></div>
+            <div class="face back"><img id="turnNextBack" alt="" /></div>
+            <span class="turn-shadow"></span>
+          </div>
+
+          <div class="turning turn-prev" id="turnPrev" aria-hidden="true">
+            <div class="face front"><img id="turnPrevFront" alt="" /></div>
+            <div class="face back"><img id="turnPrevBack" alt="" /></div>
+            <span class="turn-shadow"></span>
+          </div>
+
+          <button class="hit hit-left" id="hitLeft" aria-label="上一页"></button>
+          <button class="hit hit-right" id="hitRight" aria-label="下一页"></button>
+        </div>
+      </div>
+
+      <footer class="book-footer">
+        <p id="bookStatus" class="book-status">1 / 22</p>
+        <div class="progress-line" aria-hidden="true"><span id="bookProgress"></span></div>
+      </footer>
+    </section>
+
+    <section class="content-shell" aria-label="关于与作品">
+      <nav class="tabs" aria-label="菜单">
+        <button class="tab-btn active" type="button" data-panel="about">about me</button>
+        <button class="tab-btn" type="button" data-panel="works">works</button>
+      </nav>
+
+      <div class="content-col">
+        <article class="panel panel-about" id="panel-about">
+          <div class="about-layout">
+            <img class="avatar" src="./jen/jen.jpg" alt="Jen 个人照片" />
+            <div class="about-copy">
+              <p class="about-meta">Jen&nbsp;&nbsp;&nbsp;2001.09&nbsp;&nbsp;&nbsp;BIT 工业设计<br />Nikon Z6Ⅱ | Kodark i60 | Sony α6400<br />ins：@kakuxuxuzz</p>
+              <p>我始终相信，摄影的意义，不在于宏大的叙事，而在于那些不被注意的瞬间。</p>
+              <p>这组作品，是我与光影对话的记录，也是我观察世界的方式。</p>
+              <p>很高兴能在这里，和你分享这些被定格的瞬间。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel panel-works" id="panel-works" hidden>
+          <div class="works-grid" id="worksGrid"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="上一张">‹</button>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="下一张">›</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="关闭">×</button>
+    <p class="lightbox-meta" id="lightboxMeta"></p>
+    <img id="lightboxImage" alt="作品大图" />
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
