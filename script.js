@@ -4,10 +4,10 @@ const spreads = Array.from({ length: 22 }, (_, i) => `./photos/Frame${i + 1}.png
 const workImageNames = [
   "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png",
   "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png",
-  "DSC03859", "DSC04578-2", "DSC04984", "DSC04987", "DSC04992",
-  "DSC05809", "DSC05843", "DSC05847", "DSC05901", "DSC05920",
-  "DSC05982", "DSC06680", "DSC06682", "DSC06701", "DSC08212",
-  "DSC08374", "DSC_9782"
+  "DSC03859 1.png", "DSC04578-2 1.png", "DSC04984 1.png", "DSC04987 1.png", "DSC04992 1.png",
+  "DSC05809 1.png", "DSC05843 1.png", "DSC05847 2.png", "DSC05901 1.png", "DSC05920 1.png",
+  "DSC05982 1.png", "DSC06680 1.png", "DSC06682 1.png", "DSC06701 1.png", "DSC08212 1.png",
+  "DSC08374 1.png", "DSC_9782 1.png"
 ];
 const works = workImageNames.map((name) => `./photos2/${name}`);
 
@@ -261,7 +261,7 @@ function showLightboxByIndex(index) {
   activeWorkIndex = i;
   const src = worksOrdered[i];
   lightboxImage.src = src;
-  lightboxImage.alt = `作品 ${i + 1}`;
+  lightboxImage.alt = `浣滃搧 ${i + 1}`;
   lightboxMeta.textContent = `${i + 1} / ${worksOrdered.length}`;
 }
 
@@ -285,7 +285,7 @@ function renderWorks() {
 
     const img = document.createElement("img");
     img.src = src;
-    img.alt = `作品 ${i + 1}`;
+    img.alt = `浣滃搧 ${i + 1}`;
     img.loading = i < 6 ? "eager" : "lazy";
     img.decoding = "async";
 
