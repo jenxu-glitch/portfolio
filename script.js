@@ -1,4 +1,6 @@
-﻿const spreads = Array.from({ length: 22 }, (_, i) => `./photos/Frame ${i + 1}.png`);
+﻿// ❗修复点：去掉 Frame 和数字之间的空格
+const spreads = Array.from({ length: 22 }, (_, i) => `./photos/Frame${i + 1}.png`);
+
 
 // If your browser cannot auto-read ./photos2 directory, add image names here manually.
 const workImageNames = [
@@ -9,6 +11,7 @@ const workImageNames = [
   "DSC05982 1.png", "DSC06680 1.png", "DSC06682 1.png", "DSC06701 1.png", "DSC08212 1.png",
   "DSC08374 1.png", "DSC_9782 1.png"
 ];
+
 const works = workImageNames.map((name) => `./photos2/${name}`);
 
 const state = {
